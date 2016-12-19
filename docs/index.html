@@ -1,3 +1,523 @@
+<h2>Release 0.8.5 - December 19, 2016</h2>
+
+<h3>Task</h3>
+<ul>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-10">TRADE-10</a>
+		] - Review Dispatch Board code, make modifications, and reorganize as needed
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-11">TRADE-11</a>
+		] - Add a gulp-watch task to the application for live reload when editing html, css, and javascript
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-29">TRADE-29</a>
+		] - Update Vagrant and AWS stack to allow auto deployment
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-44">TRADE-44</a>
+		] - Convert vendor css over to use npm
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-45">TRADE-45</a>
+		] - Ensure all gulp tasks are streamed
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-46">TRADE-46</a>
+		] - Add a prod deployment task to gulp
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-47">TRADE-47</a>
+		] - Add maps to gulp minify for helping debug code
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-48">TRADE-48</a>
+		] - Finish security css task in gulp
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-49">TRADE-49</a>
+		] - Add eslint for JavaScript coding standardization, will require nvm on host machine to interface with PhpStorm
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-50">TRADE-50</a>
+		] - Run eslint for code done on dispatch board and make any corrections
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-54">TRADE-54</a>
+		] - Ensure all disptach requests are coming from the dispatch service instead of other services
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-55">TRADE-55</a>
+		] - Refactor HTML &amp; CSS related to display of Service Request List on Dispatch Board
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-85">TRADE-85</a>
+		] - Auto deploy configs
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-86">TRADE-86</a>
+		] - Fix HTML taking to long to compile when gulp runs
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-88">TRADE-88</a>
+		] - Migrate login page styles into SASS files to remove unnecessary duplication of Bootstrap styles
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-93">TRADE-93</a>
+		] - Update service request handler to account for start and end date without custom code for each abstracted fucntion
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-96">TRADE-96</a>
+		] - Add &quot;promised time&quot; to service requests in addition to scheduled start time
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-97">TRADE-97</a>
+		] - Remove need dispatched and recently dispatched tabs from service request list
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-140">TRADE-140</a>
+		] - Make the Dispatch Board pretty
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-142">TRADE-142</a>
+		] - Update service that logs activity to include all updated entity attributes
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-145">TRADE-145</a>
+		] - As a dispatcher, I would like to see an indication for today on the service request list in scheduling
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-148">TRADE-148</a>
+		] - Change from buttons to two tabs on dispatch view, a tab of all and a tab of needs scheduled
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-165">TRADE-165</a>
+		] - Add Gzip compression to frontend
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-166">TRADE-166</a>
+		] - Enable and convert Node to ES6
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-174">TRADE-174</a>
+		] - AWS AutoDeploy configs
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-175">TRADE-175</a>
+		] - Service Request Page Corrections
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-182">TRADE-182</a>
+		] - Wireframe - Product search
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-183">TRADE-183</a>
+		] - Wireframe - Product Creation
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-202">TRADE-202</a>
+		] - Wireframe - Customer Search
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-203">TRADE-203</a>
+		] - API - As a CSR, I want to search for a customer, so that I can view information or add a service request to the customer
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-204">TRADE-204</a>
+		] - UI - Customer Search
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-205">TRADE-205</a>
+		] - API - add multiple addresses to a customer
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-206">TRADE-206</a>
+		] - Wireframe - add multiple addresses to a customer
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-207">TRADE-207</a>
+		] - UI - add multiple addresses to a customer
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-208">TRADE-208</a>
+		] - API - service request creation
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-210">TRADE-210</a>
+		] - UI - service request creation
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-211">TRADE-211</a>
+		] - API - I want to see customer details after searching for the customer
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-212">TRADE-212</a>
+		] - Wireframe - I want to see customer details after searching for the customer
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-213">TRADE-213</a>
+		] - UI - I want to see customer details after searching for the customer
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-214">TRADE-214</a>
+		] - API - dispatch multiple technicians to a single service request
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-215">TRADE-215</a>
+		] - Wireframe - dispatch multiple technicians to a single service request
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-216">TRADE-216</a>
+		] - UI - dispatch multiple technicians to a single service request
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-220">TRADE-220</a>
+		] - Wireframe - document details about an incoming phone call, so that I can create a service request
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-222">TRADE-222</a>
+		] - UI - document details about an incoming phone call, so that I can create a service request
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-228">TRADE-228</a>
+		] - UI - Product Creation
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-229">TRADE-229</a>
+		] - API - Product Creation
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-230">TRADE-230</a>
+		] - Wireframe - Product Creation
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-231">TRADE-231</a>
+		] - UI - Dispatch an appointment
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-232">TRADE-232</a>
+		] - Wireframe - Service Request Detail Page
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-235">TRADE-235</a>
+		] - Tags for Product Creation
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-236">TRADE-236</a>
+		] - Create a service to consume tags on product upload
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-279">TRADE-279</a>
+		] - Add mouseflow and jira issue collector to application
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-311">TRADE-311</a>
+		] - API research, questions, concerns
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-323">TRADE-323</a>
+		] - UI - Product/Service Search
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-339">TRADE-339</a>
+		] - Dispatch Board / Dispatch Call issues that need attention
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-368">TRADE-368</a>
+		] - Review CircleCi assess it&#39;s viability for a CI platform to be used with TradeServe
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-385">TRADE-385</a>
+		] - Implement new Dispatch Board
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-404">TRADE-404</a>
+		] - Update Customer Details design to be inline with Angular Material and Kendo UI
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-407">TRADE-407</a>
+		] - Move Create and Update Service agreement to a separate combined view
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-413">TRADE-413</a>
+		] - Edit menu to be like the link provided
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-414">TRADE-414</a>
+		] - Make sure all forms have validation in customer/technicians.
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-424">TRADE-424</a>
+		] - Update AWS Configs for UI
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-425">TRADE-425</a>
+		] - Interactive wireframe for technician accepting service appointments
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-430">TRADE-430</a>
+		] - Create changelog
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-431">TRADE-431</a>
+		] - Add footer back to site
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-437">TRADE-437</a>
+		] - Interactive wireframe Technician start work on a service appointment
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-438">TRADE-438</a>
+		] - Interactive wireframe Appointment Menu, left side
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-439">TRADE-439</a>
+		] - Interactive wireframe Technician Menu, right side - avatar
+	</li>
+</ul>
+
+<h3>Bug</h3>
+<ul>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-283">TRADE-283</a>
+		] - Not able to add billing address
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-305">TRADE-305</a>
+		] - Have ability to view pages that are empty after searching for a customer.
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-309">TRADE-309</a>
+		] - Issue with how appointment appear and disappear
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-310">TRADE-310</a>
+		] - Duker - David, test and fix random issues with dispatch board
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-331">TRADE-331</a>
+		] - SRs not dragging from Needs scheduled to dispatch board
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-354">TRADE-354</a>
+		] - Adding multiple appointments to one technician with out refreshing between additions does not show what you have added immediately.
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-412">TRADE-412</a>
+		] - dispatch button disappears after changing the assigned Tech
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-415">TRADE-415</a>
+		] - Agreements Fields need adjusting second edits
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-419">TRADE-419</a>
+		] - Call scripts are covered by new menu
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-420">TRADE-420</a>
+		] - Menu is showing on login page when it should be hidden
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-421">TRADE-421</a>
+		] - Create a constant for states instead of in app.config.js to make it pass lint for 250 lines, possibly need to add lint skip for that rule
+		given property length.
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-423">TRADE-423</a>
+		] - Add in a placeholder to check the user has clicked login to ensure the menu and title bar are still there on refresh
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-432">TRADE-432</a>
+		] - Add bug button isn&#39;t working
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-433">TRADE-433</a>
+		] - On refresh entire nav disappears
+	</li>
+</ul>
+
+<h3>Story</h3>
+<ul>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-3">TRADE-3</a>
+		] - As a dispatcher, I want to filter service requests on the dispatch board by departments, so I can easily narrow down the selection of
+		available requests
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-4">TRADE-4</a>
+		] - As a dispatcher, I want to filter service requests on the dispatch board by &quot;locations&quot;, so I can easily narrow down the current
+		scheduled service requests
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-5">TRADE-5</a>
+		] - As a dispatcher, I want to change the date with a calendar picker, so I can easily jump to a specific date for service requestes
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-6">TRADE-6</a>
+		] - As a dispatcher, I want to drag a chip around the scheduling board, so I can easily change the schedule or technician of a service request
+		already on the board
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-7">TRADE-7</a>
+		] - As a dispatcher, I want the date selector to be a static width, so I the date direction arrow does not jump around on screen
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-8">TRADE-8</a>
+		] - As a dispatcher, I want scroll left or right infinitely, so I can easily go to the next day with the need for the use of the datepicker
+		and to show all times on a smaller screen
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-9">TRADE-9</a>
+		] - As a dispatcher, I want to click a view tech link on a technician, so I can temporarily apply filters to find service requests available
+		to assign
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-12">TRADE-12</a>
+		] - As a dispatcher, I want to filter service requests in the service request list by date, so I can easily find service requests on a
+		specific date
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-13">TRADE-13</a>
+		] - As a dispatcher, I want a datepicker for the service request list, so I jump to a specific date without the need to scroll through one by
+		one
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-14">TRADE-14</a>
+		] - As a dispatcher, I want to filter service requests list via a search box on any field based on what I type, so I can easily find a service
+		request
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-15">TRADE-15</a>
+		] - As a dispatcher, I want to sort service requests in the service request list by promise time, so I can easily find service requests by
+		promise time
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-16">TRADE-16</a>
+		] - As a dispatcher, I want to sort service requests in the service request list by address, so I can easily find service requests by address
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-17">TRADE-17</a>
+		] - As a dispatcher, I want to sort service requests in the service request list by service request time, so I can easily find service
+		requests by assigned service requests time
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-18">TRADE-18</a>
+		] - As a dispatcher, I want to sort service requests in the service request list by department, so I can easily find service requests by
+		department
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-20">TRADE-20</a>
+		] - As a dispatcher, I want to drag a service request to a specific tech on the board, so I can easily assign the service request to that tech
+		and a time period
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-21">TRADE-21</a>
+		] - As a dispatcher, I want to drag either side of a service request chip on the board, so I can easily give more time for the specific
+		service request as needed
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-22">TRADE-22</a>
+		] - As a dispatcher, I want to the service request list divided into 4 groups, so I can easily see service request that need dispatched, need
+		scheduled, recently dispatched, and ready for review service requests
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-23">TRADE-23</a>
+		] - As a dispatcher, I want to see sort directing for a specific sorter, so I can easily tell if its ascending or decending
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-26">TRADE-26</a>
+		] - As a dispatcher, I want to drag a chip from the service request list to the dispatch schedule, so that I can easily schedule a service
+		request
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-75">TRADE-75</a>
+		] - As a Service Manager, I want to upload my products/services in csv format.
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-76">TRADE-76</a>
+		] - As a dispatcher, I want to filter technicians on the dispatch board by departments, so I can easily narrow down the available technicians
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-77">TRADE-77</a>
+		] - As a dispatcher, I want to filter technicians on the dispatch board by &quot;locations&quot;, so I can easily narrow down available
+		technicians
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-87">TRADE-87</a>
+		] - Date range picker for service request list needs to be converted to the single picker
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-91">TRADE-91</a>
+		] - As a dispatcher, I want to view service request details from the service request list, so that I can make an informed decision about which
+		request to dispatch
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-92">TRADE-92</a>
+		] - As a dispatcher, I want to view the technician details from the dispatch board
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-95">TRADE-95</a>
+		] - As a dispatcher, I want to have a button in the service request list to click to see the service request details
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-100">TRADE-100</a>
+		] - As a dispatcher, I want to search for a customer, so that I can see if they are currently scheduled for an appointment
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-117">TRADE-117</a>
+		] - As a dispatcher, I want an interactive dispatch board, so that I can easily schedule and dispatch service requests
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-144">TRADE-144</a>
+		] - As a dispatcher, I would like to see the business hours highlighted on the scheduling board
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-146">TRADE-146</a>
+		] - As a dispatcher, on the scheduling board I would like to see the current time indicated by a line
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-172">TRADE-172</a>
+		] - As a dispatcher, I would like to be able to view and edit customer information on a line by line basis.
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-234">TRADE-234</a>
+		] - As a Dispatcher, I need the ability to dispatch Appointments for a Service Request
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-258">TRADE-258</a>
+		] - As a Service Manager, I need the ability to upload Services in CSV format, so that I can edit/create/update large amounts of data instead
+		of one at a time
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-264">TRADE-264</a>
+		] - As a Customer, I would like to receive EMAIL notifications related to my service request, so that I can be up to date on what is going on.
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-278">TRADE-278</a>
+		] - As a CSR, Dispatcher, I need the ability to assign a Create a Customer and assign them as Commercial or Residential, so that I can keep
+		customer information detailed and current
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-285">TRADE-285</a>
+		] - As a Service Manager, I need the ability to search for products/services, so that I can update their information quickly and easily
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-286">TRADE-286</a>
+		] - As a Service Manager, I need the ability to assign tag types to the Industry / Department of Products/Services, so that they can be easier
+		to search for by Technicians &amp; Service Managers
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-302">TRADE-302</a>
+		] - As a Dispatcher/ CSR, I need the ability to view scripts during an incoming call, so that I can convert more calls into appointments
+	</li>
+	<li>[
+		<a href="https://tradeserve.atlassian.net/browse/TRADE-338">TRADE-338</a>
+		] - As a Service Manager, I need the ability to edit a product, so that I can change tags and values for said product
+	</li>
+</ul>
+
+
 <h2>Release 0.8.4 - December 12, 2016</h2>
 <h3>Task</h3>
 <ul>
@@ -102,7 +622,7 @@
 		] - Removing tags from products
 	</li>
 </ul>
-            
+
 <br>
 <br>
 <h2>Release 0.8.0 - November 14, 2016</h2>
